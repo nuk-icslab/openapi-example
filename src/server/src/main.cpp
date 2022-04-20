@@ -63,7 +63,7 @@ int main() {
   setUpUnixSignals(sigs);
 #endif
 
-  int port = 3000;
+  int port = 3456;
   Pistache::Address addr(Pistache::Ipv4::any(), Pistache::Port(port));
 
   httpEndpoint = new Pistache::Http::Endpoint((addr));

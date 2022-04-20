@@ -1,6 +1,6 @@
 const EchoTestClient = require("echo-test-client");
 
-const serverUrl = "http://127.0.0.1:3000";
+const serverUrl = "http://127.0.0.1:3456";
 const myApiClient = new EchoTestClient.ApiClient(serverUrl);
 var api = new EchoTestClient.DefaultApi(myApiClient);
 
