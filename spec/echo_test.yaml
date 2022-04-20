@@ -1,0 +1,33 @@
+openapi: 3.0.3
+info:
+  title: Simple Echo API
+  description: Echo API for testing
+  version: 0.1.0
+
+servers:
+  - url: "{apiRoot}"
+    variables:
+      apiRoot:
+        default: https://example.org
+        description: apiRoot as defined in subclause 7.5 of 3GPP TS 29.222.
+paths:
+  /echo-test/v1/ping:
+    get:
+      summary: Test whether server is alive
+      responses:
+        "200": # status code
+          description: Return some message if server is alive.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  msg:
+                    type: string
+                    example: I'm alive
+                required:
+                  - msg
+        "204":
+          description: Server is alive. (Lightweight response)
+        "500":
+          description: Server has some trouble.
