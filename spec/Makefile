@@ -36,7 +36,7 @@ server-pistache: $(yamls)
 
 $(doc_output_dir)/%.html: $(spec_src_dir)/%.yaml
 	mkdir -p $(@D)
-	redoc-cli bundle -o $@ $^
+	redoc-cli build -o $@ $^
 
 clean:
 	rm -rf $(doc_output_dir)
